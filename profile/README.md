@@ -1,6 +1,6 @@
-![banner](https://raw.githubusercontent.com/mineral-dart/core/develop/assets/images/banner.png)
-
 # Mineral - Discord Bot Framework for Dart
+
+![banner](https://raw.githubusercontent.com/mineral-dart/core/develop/assets/images/banner.png)
 
 Mineral meets a need for scalability over time but also within a team of developers thanks to a modular and flexible software architecture. modular and flexible software architecture.
 
@@ -14,96 +14,14 @@ With Mineral, you can unleash the full potential of your bot and bring your Disc
 
 ## Key Features
 
-### Command Handling
-
-Commands in Mineral serve the purpose of defining specific actions that your bot can perform in response to a given command. 
-They allow users to communicate with your bot and interact with it in a structured way.
-
-```dart
-class HelloWorldCommand extends MineralCommand<GuildCommandInteraction> {
-  HelloWorldCommand(): super(
-    label: Display('hello'),
-    description: Display('Add new member to the ticket !'),
-    options: [
-      CommandOption.user(Display('member'), Display('The member to add to the ticket !'))
-    ]
-  );
-
-  Future<void> handle (interaction) async {
-    final targetMember = interaction.getMember('member');
-
-    await interaction.reply(
-      content: 'Hello $targetMember',
-      private: true
-    );
-  }
-}
-```
-
-### Event Listeners
-Commands in Mineral serve the purpose of defining specific actions that your bot can perform in response to a given command. 
-They allow users to communicate with your bot and interact with it in a structured way.
-
-By utilizing events, you can create dynamic and interactive experiences within your Discord bot. 
-Events allow you to capture and respond to various actions and changes happening in real-time, enabling your bot to adapt and provide relevant functionality based on the events occurring in the Discord environment.
-
-```dart
-class Ready extends MineralEvent<ReadyEvent> with Console {
-  Future<void> handle (event) async {
-    console.info('${event.client.user.username} is ready to use !');
-  }
-}
-```
-
-### Interactive Components
-By utilizing events, you can create dynamic and interactive experiences within your Discord bot. 
-Events allow you to capture and respond to various actions and changes happening in real-time, enabling your bot to adapt and provide relevant functionality based on the events occurring in the Discord environment.
-
-By incorporating interactive components into your Discord bot, you can enhance user engagement and provide a more interactive and dynamic experience. They allow users to interact with your bot directly within messages, enabling them to perform actions, make choices, and receive real-time feedback. Interactive components add an extra layer of interactivity to your bot's functionality and can greatly enhance the user experience.
-
-Interactive components enhance the way buttons are used in Discord bots by introducing interactivity and real-time feedback.
-
-A single file allows you to design your composanbt and attach a dedicated handler when the user interacts with it.
-
-```dart
-class MyButton extends InteractiveButton {
-  MyButton(): super('my-id');
-
-  @override
-  Future<void> handle (ButtonCreateEvent event) async {
-    await event.interaction.reply(
-      content: 'Hello Mineral !', 
-      private: true
-    );
-  }
-
-  @override
-  ButtonBuilder build () => ButtonBuilder.button(customId)
-    ..setLabel('Mineral')
-    ..setStyle(ButtonStyle.primary);
-}
-```
-
-### State Management
-Share and manage data across your bot using shared states.
-
-```dart
-class MyState extends MineralState<int> {
-  MyState() : super(0);
-
-  void increment() => state++;
-
-  void decrement() => state--;
-}
-```
-
-- **HTTP API Integration:** Seamlessly interact with the Discord API to perform actions such as sending messages, updating user information, creating channels, and more.
-
-- **Container and Dependency Injection:** Take advantage of the powerful dependency injection capabilities provided by Mineral's built-in container, making it easy to manage and access your services and dependencies.
-
-- **Error Handling and Logging:** Benefit from robust error handling and logging mechanisms to ensure smooth operation and easy debugging of your bot.
-
-- **Extensible Architecture:** Extend and customize Mineral to fit your specific needs with ease. The framework provides a modular and extensible architecture that allows for easy integration of custom modules and plugins.
+- Command Handling
+- Event listeners
+- Interactive Components
+- State Managment
+- HTTP API Integration
+- Container and Dependency Injection
+- Error Handling and Logging
+- Extensible Architecture
 
 ## Community and Support
 Join our vibrant community of Discord bot developers on Discord to get support, share your projects, and collaborate with other developers.
