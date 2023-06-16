@@ -1,6 +1,6 @@
 # Mineral - Discord Bot Framework for Dart
 
-![banner](https://raw.githubusercontent.com/mineral-dart/core/develop/assets/images/banner.png)
+![banner](https://raw.githubusercontent.com/mineral-dart/core/develop/assets/images/github-branding.png)
 
 Mineral meets a need for scalability over time but also within a team of developers thanks to a modular and flexible software architecture. modular and flexible software architecture.
 
