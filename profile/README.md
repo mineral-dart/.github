@@ -10,17 +10,6 @@ In order to improve your development experience, we wanted to integrate some fea
 
 With Mineral, you can unleash the full potential of your bot and bring your Discord server to life.
 
-## Key Features
-
-- Command Handling
-- Event listeners
-- Interactive Components
-- State Managment
-- HTTP API Integration
-- Container and Dependency Injection
-- Error Handling and Logging
-- Extensible Architecture
-
 ## Community and Support
 Join our vibrant community of Discord bot developers on Discord to get support, share your projects, and collaborate with other developers.
 
